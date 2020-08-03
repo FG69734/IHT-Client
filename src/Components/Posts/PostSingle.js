@@ -2,18 +2,20 @@ import React from 'react'
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import PopularPosts from './PopularPosts';
+import {Link, withRouter} from 'react-router-dom'
 
 class PostSingle extends React.Component{
 
     render(){
+        this.props.location.post &&  console.log(this.props.location.post.post);
         return(
            <>
             <div className="site-section">
             <div className="container">
                 <div className="row">
                 <div className="col-lg-8 single-content">
-                <div class="section-title">
-                    <span class="caption d-block small">Categories</span>
+                <div className="section-title">
+                    <span className="caption d-block small">Categories</span>
                     <h2>Politics</h2>
                 </div>
                 <p className="mb-5">
@@ -58,4 +60,4 @@ class PostSingle extends React.Component{
     }
 }
 
-export default PostSingle;
+export default withRouter(PostSingle);
