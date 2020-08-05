@@ -1,14 +1,16 @@
 import React from 'react';
-import spinner from './spinner.gif';
+import spinner from './spinner2.gif';
 
 const SpinnerSearch = (props) => {
+
     return (
-        <div className="w-100 h-100" style={{'position': 'fixed', 'top': '0', 'left': 0}} > 
-            <div className="d-flex w-100 h-100 justify-content-center align-items-center bg-gray" style={{'opacity': '.7'}} >
-                <img width= '80px' height= '80px' src={spinner} />
+        <div className="w-100"> 
+            <div className="d-flex w-100 h-100 justify-content-center align-items-center">
+                <img style={{marginBottom: '100px', marginTop: '100px'}} src={spinner} />
             </div>
         </div>
     )
+
 }
 
-export default SpinnerSearch; 
+export default SpinnerSearch;

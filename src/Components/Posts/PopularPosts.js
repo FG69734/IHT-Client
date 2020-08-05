@@ -1,10 +1,14 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+import axios from 'axios'
+import { URL, getHeaderConfig } from '../../Utils/constants';
 
-class Login extends React.Component{
+class PopularPosts extends React.Component{
+
 
     render(){
         return(
-            <div className="col-lg-3 ml-auto">
+        <div className="col-lg-3 ml-auto">
             <div className="section-title">
             <h2>Popular Posts</h2>
             </div>
@@ -61,4 +65,4 @@ class Login extends React.Component{
     }
 }
 
-export default Login;
+export default PopularPosts;
