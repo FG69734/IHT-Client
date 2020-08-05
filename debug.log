@@ -1,0 +1,12 @@
+[0728/190513.198:ERROR:settings.cc(320)] Settings magic is not 1129342067
+[0731/102534.105:ERROR:settings.cc(320)] Settings magic is not 1129342067
+[0731/141835.625:ERROR:process_info.cc(359)] UncheckedAllocate
+[0731/182602.538:ERROR:process_reader_win.cc(123)] NtOpenThread: {Accès refusé} Un processus a demandé l’accès a un objet, mais il ne bénéficie pas des autorisations nécessaires. (0xc0000022)
+[0731/182602.751:ERROR:exception_snapshot_win.cc(98)] thread ID 6096 not found in process
+[0731/182602.820:ERROR:process_reader_win.cc(123)] NtOpenThread: {Accès refusé} Un processus a demandé l’accès a un objet, mais il ne bénéficie pas des autorisations nécessaires. (0xc0000022)
+[0731/182602.884:ERROR:exception_snapshot_win.cc(98)] thread ID 3936 not found in process
+[0731/182603.181:ERROR:process_reader_win.cc(123)] NtOpenThread: {Accès refusé} Un processus a demandé l’accès a un objet, mais il ne bénéficie pas des autorisations nécessaires. (0xc0000022)
+[0731/182603.181:ERROR:exception_snapshot_win.cc(98)] thread ID 4728 not found in process
+[0731/182603.211:ERROR:process_reader_win.cc(123)] NtOpenThread: {Accès refusé} Un processus a demandé l’accès a un objet, mais il ne bénéficie pas des autorisations nécessaires. (0xc0000022)
+[0731/182603.211:ERROR:exception_snapshot_win.cc(98)] thread ID 3456 not found in process
+[0802/165641.099:ERROR:filesystem_win.cc(148)] DeleteFile C:\Users\dell\AppData\Local\Google\Chrome\User Data\Crashpad\reports\bd806f34-f498-404b-a7c4-d3ac39f883e0.dmp: Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus. (0x20)
