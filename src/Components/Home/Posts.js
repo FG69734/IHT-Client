@@ -32,7 +32,7 @@ class Posts extends React.Component{
           <div key={index} className="post-entry-2 d-flex">
               <div className="thumbnail" style={{backgroundImage: `url(${img})`}}></div>
               <div className="contents">
-              <h2><Link to="/post-single">{post.titre}</Link></h2>
+              <h2><Link to={"/post-single/"+post.id}>{post.titre}</Link></h2>
               <p className="mb-3">{post.contenu}</p>
               <div className="post-meta">
                   <span className="d-block"><strong>{post.user.noms +" "+ post.user.prenoms}</strong>  à la rédaction </span>
@@ -61,7 +61,7 @@ class Posts extends React.Component{
 
                 <div className="row">
                     <div className="col-6">
-                        <Link to="/posts" className="btn btn-primary py-3 px-5 offset-sm-10" > Voir plus... </Link>
+                        <Link to="/posts" style={{backgroundColor: '#03224c'}} className="btn btn-primary py-3 px-5 offset-sm-10" > Voir plus... </Link>
                     </div>
                 </div>
           </div> 

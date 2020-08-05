@@ -81,7 +81,7 @@ class App extends React.Component {
             <Route exact path="/contact" render={(props)=> 
               <Contact logout={this.logoutHandler} currentUser={currentUser} isAuthenticated={isAuthenticated} {...props} />} 
             />
-            <Route exact path="/post-single" render={(props)=> 
+            <Route exact path="/post-single/:id" render={(props)=> 
               <PostSingle logout={this.logoutHandler} currentUser={currentUser} isAuthenticated={isAuthenticated} {...props} />} 
             />
             <Route exact path="/posts" render={(props)=> 

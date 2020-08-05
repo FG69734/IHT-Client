@@ -3,19 +3,25 @@ import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import PopularPosts from './PopularPosts';
 import {Link, withRouter} from 'react-router-dom'
+import axios from 'axios'
+import { URL, getHeaderConfig } from '../../Utils/constants';
 
 class PostSingle extends React.Component{
 
+
     render(){
-        this.props.location.post &&  console.log(this.props.location.post.post);
+        // console.log(this.state.post.categorie.categorie)
+        // const {post} = this.state
+        // let img = 'data:image/png;base64,'+post.viewPicture;
+        //const categorie = this.state.post.categorie.categorie;
         return(
            <>
             <div className="site-section">
             <div className="container">
                 <div className="row">
                 <div className="col-lg-8 single-content">
-                <div className="section-title">
-                    <span className="caption d-block small">Categories</span>
+                <div class="section-title">
+                    <span class="caption d-block small">Categories</span>
                     <h2>Politics</h2>
                 </div>
                 <p className="mb-5">
@@ -55,9 +61,79 @@ class PostSingle extends React.Component{
             </div>
             </div>
                     
-           </> 
+           </>
         );
     }
 }
+
+// componentDidMount(){
+//         console.log("id="+this.props.match.params.id)
+//         if(this.props.match.params.id){
+//             axios.get(`${}/posts/getById/${this.props.match.params.id}`, getHeaderConfig())
+//             .then(res=>{
+//                 console.log(res.data)
+//                 this.setState({post: res.data})
+//             })
+//             .catch(err=>{
+//                 console.log(err.response);
+//             })
+//         }
+//         axios.get(`${URL}/posts/getLastFivePosts`, getHeaderConfig())
+//         .then(res=>{
+//             this.setState({posts: res.data.content})
+//         })
+//         .catch(err=>{
+//             console.log(err);
+//         })
+//     }
+
+//     render(){
+//         const post = this.state;
+//         console.log(this.state.post)
+//         let img= 'data:image/png;base64,'+post.viewPicture;
+//         return(
+//            <>
+//             <div className="site-section">
+//             <div className="container">
+//                 <div className="row">
+//                 <div className="col-lg-8 single-content">
+//                 <div className="section-title">
+//                     <span className="caption d-block small">Catégorie</span>
+//                     <h2>{post.categorie.categorie}</h2>
+//                 </div>
+//                 <p className="mb-5">
+//                 <img src={img} alt={post.titre} className="img-fluid" />
+//                 </p>  
+//                 <h1 className="mb-4">
+//                 {post.titre}
+//                 </h1>
+//                 <div className="post-meta d-flex mb-5">
+//                 <div className="bio-pic mr-3">
+//                     <img src="images/person_1.jpg" alt="Image" className="img-fluidid" />
+//                 </div>
+//                 <div className="vcard">
+//                     <span className="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+//                     <span className="date-read">Jun 14 <span className="mx-1">&bullet;</span> 3 min read <span className="icon-star2"></span></span>
+//                 </div>
+//                 </div>
+
+//                 <p>{post.contenu}</p>
+                
+//                 <div className="pt-5">
+//                     <p>Categories:  <a href="#">Design</a>, <a href="#">Events</a>  Tags: <a href="#">#html</a>, <a href="#">#trends</a></p>
+//                 </div>
+            
+//                 </div>
+
+//                 <PopularPosts posts={this.state.posts} />
+
+//                 </div>
+            
+//             </div>
+//             </div>
+                    
+//            </> 
+//         );
+//     }
 
 export default withRouter(PostSingle);
